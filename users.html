@@ -676,7 +676,19 @@
                 }
             })
         }
-        
+
+        const updateData = () => {
+            Swal.fire({
+                title: 'Data telah diperbarui',
+                icon: 'success',
+                confirmButtonText: 'Tutup',
+            }).then((result) => {
+                if(result.isConfirmed){
+                    location.reload();
+                }
+            })
+        }
+
         const deleteData = () => {
             Swal.fire({
                 title: 'Yakin hapus data?',
@@ -688,21 +700,8 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire('Terhapus!', 'Data telah dihapus.', 'success');
-                    location.reload();
                 } else if (result.isDenied) {
                     Swal.fire('Changes are not saved', '', 'info')
-                }
-            })
-        }
-
-        const updateData = () => {
-            Swal.fire({
-                title: 'Data telah diperbarui',
-                icon: 'success',
-                confirmButtonText: 'Tutup',
-            }).then((result) => {
-                if(result.isConfirmed){
-                    location.reload();
                 }
             })
         }
