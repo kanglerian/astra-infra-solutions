@@ -2,3 +2,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+.dropdown-toggle {
+    background-color: white;
+    color: rgb(110, 112, 126);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
