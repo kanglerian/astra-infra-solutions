@@ -7,25 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="amisbudi.co">
 
     <title>Astra Infra Solutions - Dashboard</title>
     <link rel="shortcut icon" href="./img/favicon.png">
-    <!-- Custom fonts for this template-->
+
+    <!-- Icons & Fonts-->
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="./css/sb-admin-2.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- JS -->
+    <script src="./js/sweetalert2.min.js"></script>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
-    <!-- Custom styles for this page -->
+    <!-- CSS -->
+    <link href="./css/sb-admin-2.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+        rel="stylesheet">
     <link href="./vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="./css/sweetalert2.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -43,7 +46,7 @@
             </a>
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="dashboard.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -52,8 +55,8 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- Nav Item - Master Data Menu -->
+            <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseData"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-database"></i>
@@ -73,7 +76,7 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Transaksi Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTransaksi"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -93,7 +96,7 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Nav Item - Report Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReport"
                     aria-expanded="true" aria-controls="collapsePages">
@@ -115,20 +118,21 @@
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
+            <!-- Nav Item - Inspection -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-search"></i>
                     <span>Inspection</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Yearly Program -->
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-calendar-week"></i>
                     <span>Yearly Program</span></a>
             </li>
 
+            <!-- Nav Item - Setting Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSetting"
                     aria-expanded="true" aria-controls="collapseTwo">
@@ -165,7 +169,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -355,14 +359,14 @@
 
                     <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Total Employee Card -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-primary h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Jumlah Employee</div>
+                                                Total Employee</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
                                         </div>
                                         <div class="col-auto">
@@ -373,9 +377,9 @@
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Employee Active Card -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-primary h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -391,10 +395,9 @@
                             </div>
                         </div>
 
-
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Employee Non-Active Card -->
                         <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-danger shadow h-100 py-2">
+                            <div class="card border-left-danger h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -412,8 +415,8 @@
 
                     </div>
 
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
+                    <!-- DataTables -->
+                    <div class="card mb-4">
                         <div class="card-header py-3">
                             <div class="space">
                                 <div class="item">
@@ -471,7 +474,7 @@
                                                 <button type="button" class="btn btn-warning btn-sm border-0"
                                                     data-toggle="modal" data-target="#editData"><i
                                                         class="fas fa-edit"></i></button>
-                                                <button type="button" data-toggle="modal" data-target="#deleteData"
+                                                <button type="button" onclick="deleteData()"
                                                     class="btn btn-danger btn-sm border-0"><i
                                                         class="fas fa-trash"></i></button>
                                             </td>
@@ -523,33 +526,13 @@
                 <div class="modal-body">Klik logout maka sesi anda akan berakhir.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="index.html">Logout</a>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="modal fade" id="deleteData" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Yakin untuk menghapus data?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Jika anda klik hapus maka data tidak akan bisa dikembalikan lagi.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                    <a class="btn btn-primary" href="#">Hapus</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
+    <!-- Tambah Model -->
     <div class="modal fade" id="tambahData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -595,14 +578,14 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="button" onclick="saveData()" class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Edit Model -->
     <div class="modal fade" id="editData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -649,44 +632,81 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="button" onclick="updateData()" class="btn btn-primary">Update</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 
-
-    <!-- Bootstrap core JavaScript-->
+    <!-- JavaScript-->
     <script src="./vendor/jquery/jquery.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
     <script src="./vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
+    <!-- Admin -->
     <script src="./js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
+    <!-- Chart -->
     <script src="./vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
     <script src="./js/demo/chart-area-demo.js"></script>
     <script src="./js/demo/chart-pie-demo.js"></script>
 
-    <!-- Page level plugins -->
+    <!-- Datatables -->
+    <script src="./js/demo/datatables-demo.js"></script>
     <script src="./vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="./vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="./js/demo/datatables-demo.js"></script>
-
+    <!-- Bootstrap Select -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-
     <script>
         $(function () {
             $('select').selectpicker();
         });
+
+        const saveData = () => {
+            Swal.fire({
+                title: 'Data baru telah ditambahkan',
+                icon: 'success',
+                confirmButtonText: 'Tutup',
+            }).then((result) => {
+                if(result.isConfirmed){
+                    location.reload();
+                }
+            })
+        }
+        
+        const deleteData = () => {
+            Swal.fire({
+                title: 'Yakin hapus data?',
+                text: 'Klik hapus jika kamu setuju.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Hapus',
+                cancelButtonText: 'Batal',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire('Terhapus!', 'Data telah dihapus.', 'success');
+                    location.reload();
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not saved', '', 'info')
+                }
+            })
+        }
+
+        const updateData = () => {
+            Swal.fire({
+                title: 'Data telah diperbarui',
+                icon: 'success',
+                confirmButtonText: 'Tutup',
+            }).then((result) => {
+                if(result.isConfirmed){
+                    location.reload();
+                }
+            })
+        }
+
     </script>
 </body>
 
