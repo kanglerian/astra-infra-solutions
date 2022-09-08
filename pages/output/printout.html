@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.png">
+    <title>Astra Infra Solutions - Print Material Approval</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            font: 12pt "Tahoma";
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 287mm;
+            padding: 15mm;
+            padding-top: 5mm;
+            margin: 10mm auto;
+            border: 1px #D3D3D3 solid;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .subpage {
+            padding: 1cm;
+            border: 5px red solid;
+            height: 257mm;
+            outline: 2cm #FFEAEA solid;
+        }
+
+        td {
+            padding-top: 5px;
+        }
+
+        @page {
+            size: F4;
+            margin: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                width: 210mm;
+                height: 297mm;
+            }
+
+            .page {
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-2 {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .flex-3 {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .box {
+            border: 1px solid black;
+            width:20px;
+            height:20px;
+            margin-right: 5px;
+        }
+        .box-2 {
+            font-size: 12px;
+            overflow: hidden;
+            width: 150px;
+            text-align: center;
+        }
+        .p {
+            border-bottom: 1px solid black;margin-bottom: 15px;
+        }
+        .p-2 {
+            border-bottom: 1px solid black;
+            margin-top: 60px;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .font-reguler {
+            font-size: 14px;
+        }
+
+        .font-sm {
+            font-size: 12px;
+        }
+
+        .mt-2 {
+            margin-top: 10px;
+        }
+
+        .mint-2 {
+            margin-top: -10px;
+        }
+
+        .border {
+            border: 0.5px solid black;
+            padding: 0px 10px 0px 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book">
+        <div class="page">
+            <div class="flex-3">
+                <div>
+                    <img src="../../img/logo.png" height="100px">
+                </div>
+                <div>
+                    <p style="font-size: 12px"><b>PTEPI-AIS<br>PENDOPO DARMODIHARJO</b><br>Jln. D.I Panjaitan Gang
+                        Karangsari
+                        58, RT.011/003<br>Kel. Soklat Kec.
+                        Subang 41215<br>Tel 0260 4241174</p>
+                </div>
+            </div>
+            <hr style="margin: 0px 0px 0px 0px">
+            <p class="font-reguler font-bold text-center">MATERIAL APPROVAL FORM</p>
+            <div class="border font-sm font-bold flex">
+                <p>Submittal No: 1231232131</p>
+                <p>REV. No: 1231232131</p>
+                <p>Date: 26/03/1945</p>
+            </div>
+            <div class="border">
+                <p class="font-bold font-sm">Contract No: 1231232131</p>
+            </div>
+            <div class="border font-sm flex">
+                <p class="font-bold">Project Title: DRIVING LOREM IPSUM DOLOR SIT AMET</p>
+                <p>[v] Civil</p>
+            </div>
+            <div class="border flex font-sm" style="display: flex;justify-content:space-between">
+                <p>Material Description: Pembatas Karpet Golf</p>
+                <p>Application / Location: Bandung Jawa Barat</p>
+            </div>
+            <div class="border flex font-sm">
+                <p>Specification Reference: 1231232131</p>
+                <p>BOQ Reference: 1231232131</p>
+            </div>
+            <div class="border flex font-sm">
+                <p>Manufacturer / Supplier: 1231232131</p>
+                <p>Country of Manufacturer: 1231232131</p>
+            </div>
+            <div class="border font-sm">
+                <p>Local Agent: 1231232131</p>
+            </div>
+            <div class="border flex font-sm">
+                <div>
+                    <p>Material:<br>1231232131</p>
+                    <p>Delivery Period: 1231232131</p>
+                    <p>Submitted By: 1231232131</p>
+                    <p>Date: 26/03/1945</p>
+                </div>
+                <img src="../../img/background.jpg" alt="" width="250px">
+            </div>
+            <p class="font-reguler font-bold text-center">FOR LMS REPRESENTATIVE</p>
+            <p class="font-reguler font-bold text-center">LMS Comments and Recommendations</p>
+            <div class="grid font-sm">
+                <div class="flex-2">
+                    <div class="box"></div>
+                    <p>Sample Required</p>
+                </div>
+                <div class="flex-2">
+                    <div class="box"></div>
+                    <p>Test Required</p>
+                </div>
+                <div class="flex-2">
+                    <div class="box"></div>
+                    <p>Guarantee Required</p>
+                </div>
+                <div class="flex-2">
+                    <div class="box"></div>
+                    <p>Additional Information Required</p>
+                </div>
+                <div class="flex-2">
+                    <div class="box"></div>
+                    <p>Approved</p>
+                </div>
+                <div class="flex-2">
+                    <div class="box"></div>
+                    <p>Approved with Comments</p>
+                </div>
+                <div class="flex-2">
+                    <div class="box"></div>
+                    <p>Rejected</p>
+                </div>
+            </div>
+            <div style="margin-top:20px">
+                <div class="p"></div>
+                <div class="p"></div>
+                <div class="p"></div>
+                <div class="p"></div>
+            </div>
+            <div class="flex">
+                <div class="box-2">
+                    <p>Diajukan oleh:</p>
+                    <div class="p-2"></div>
+                    <p>PTEPI-AIS JO</p>
+                    <p class="text-left">Date:</p>
+                </div>
+                <div class="box-2">
+                    <p>Diajukan oleh:</p>
+                    <div class="p-2"></div>
+                    <p>PTEPI-AIS JO</p>
+                    <p class="text-left">Date:</p>
+                </div>
+                <div class="box-2">
+                    <p>Diajukan oleh:</p>
+                    <div class="p-2"></div>
+                    <p>PTEPI-AIS JO</p>
+                    <p class="text-left">Date:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

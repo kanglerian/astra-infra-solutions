@@ -493,6 +493,9 @@
                                         </div>
                                         <button type="submit" class="btn btn-primary my-3"><i class="fas fa-save"></i>
                                             Simpan</button>
+                                        <a href="../output/printout.html" class="btn btn-info my-3"><i
+                                                class="fas fa-print"></i>
+                                            Cetak</a>
                                     </form>
                                 </div>
                             </div>
@@ -715,9 +718,14 @@
             })
         }
 
+        const cetak = () => {
+            window.print();
+            document.getElementsByClassName('sidebar').hidden
+        }
+
     </script>
     <script>
-        function showPreview(event) {
+        const showPreview = (event) => {
             if (event.target.files.length > 0) {
                 var src = URL.createObjectURL(event.target.files[0]);
                 var preview = document.getElementById("file-ip-1-preview");
