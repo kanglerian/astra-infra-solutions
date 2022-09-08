@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="amisbudi.co">
 
-    <title>PT. Assets Media - Shift Setting</title>
+    <title>PT. Assets Media - Holiday Setting</title>
     <link rel="shortcut icon" href="./img/favicon.png">
 
     <!-- Icons & Fonts-->
@@ -142,7 +142,7 @@
                 <div id="collapseSetting" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="../setting/shift.html"><i class="fas fa-cloud-moon"></i> Shift</a>
-                        <a class="collapse-item" href="../setting/holiday.html"><i class="fas fa-calendar-week"></i> Holiday</a>
+                        <a class="collapse-item" href="#"><i class="fas fa-calendar-week"></i> Holiday</a>
                         <a class="collapse-item" href="#"><i class="fas fa-bullhorn"></i> Complaint</a>
                         <a class="collapse-item" href="#"><i class="fas fa-map"></i> Area</a>
                         <a class="collapse-item" href="#"><i class="fas fa-warehouse"></i> Jenis Asset</a>
@@ -359,18 +359,35 @@
 
                     <div class="row">
 
-                        <!-- Total Employee Card -->
-                        <div class="col-12 mb-4">
+                        <div class="col-xl-6 col-md-6 mb-4">
                             <div class="card border-left-primary h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Shift</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
+                                                Total Standby</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-cloud-moon fa-2x text-gray-300"></i>
+                                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Employee Active Card -->
+                        <div class="col-xl-6 col-md-6 mb-4">
+                            <div class="card border-left-danger h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                                Total No Standby</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-users fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -402,42 +419,22 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Shift Name</th>
+                                            <th>Employee Name</th>
+                                            <th>Holiday Name</th>
+                                            <th>Tanggal</th>
                                             <th>Description</th>
+                                            <th>Standby</th>
                                             <th>#</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>Pagi</td>
-                                            <td>Kerjo pagi pagi yo sampe siang.</td>
-                                            <td>
-                                                <button type="button" class="btn btn-warning btn-sm border-0"
-                                                    data-toggle="modal" data-target="#editData"><i
-                                                        class="fas fa-edit"></i></button>
-                                                <button type="button" onclick="deleteData()"
-                                                    class="btn btn-danger btn-sm border-0"><i
-                                                        class="fas fa-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Siang</td>
-                                            <td>Kerjo siang yo sampe malem.</td>
-                                            <td>
-                                                <button type="button" class="btn btn-warning btn-sm border-0"
-                                                    data-toggle="modal" data-target="#editData"><i
-                                                        class="fas fa-edit"></i></button>
-                                                <button type="button" onclick="deleteData()"
-                                                    class="btn btn-danger btn-sm border-0"><i
-                                                        class="fas fa-trash"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Malam</td>
-                                            <td>Kerjo malem yo sampe pagi.</td>
+                                            <td>Ahmad Subarjo</td>
+                                            <td>Holiday yo!</td>
+                                            <td>17 Agustus 1945</td>
+                                            <td>Lorem ipsum kolor sit amet.</td>
+                                            <td><span class="badge badge-primary">yes</span></td>
                                             <td>
                                                 <button type="button" class="btn btn-warning btn-sm border-0"
                                                     data-toggle="modal" data-target="#editData"><i
@@ -505,7 +502,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Shift</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Holiday</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -513,12 +510,27 @@
                 <form method="POST" action="#">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Shift</label>
-                            <input type="number" class="form-control" placeholder="Enter shift in here...">
+                            <label>Employee Name</label>
+                            <input type="text" class="form-control" placeholder="Enter employee name in here...">
+                        </div>
+                        <div class="form-group">
+                            <label>Holiday Name</label>
+                            <input type="text" class="form-control" placeholder="Enter holiday name in here...">
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal</label>
+                            <input type="date" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Description</label>
                             <textarea class="form-control" placeholder="Enter description in here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Standby</label>
+                            <select class="form-control">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -535,7 +547,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Data Shift</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Data Holiday</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -543,12 +555,27 @@
                 <form method="POST" action="#">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Shift</label>
-                            <input type="number" class="form-control" placeholder="Enter shift in here...">
+                            <label>Employee Name</label>
+                            <input type="text" class="form-control" placeholder="Enter employee name in here...">
+                        </div>
+                        <div class="form-group">
+                            <label>Holiday Name</label>
+                            <input type="text" class="form-control" placeholder="Enter holiday name in here...">
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal</label>
+                            <input type="date" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Description</label>
                             <textarea class="form-control" placeholder="Enter description in here..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Standby</label>
+                            <select class="form-control">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
