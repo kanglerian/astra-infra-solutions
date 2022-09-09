@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="amisbudi.co">
 
-    <title>PT. Assets Media - Dashboard</title>
+    <title>PT. Assets Media - Detail Jadwal</title>
     <link rel="shortcut icon" href="./img/favicon.png">
 
     <!-- Icons & Fonts-->
@@ -356,126 +356,51 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                    <div class="row">
-
-                        <!-- Total Employee Card -->
-                        <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-primary h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Employee</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">2</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-users fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <a href="../master/jadwal.html" class="btn btn-secondary btn-sm"><i class="fas fa-chevron-left"></i></a>
+                            <h5 class="font-weight-bold mt-3">Employee: Haisyam Maulana, M.Kom</h5>
+                            <p>SPV: DR. Ahmad Subarjo</p>
                         </div>
-
-                        <!-- Employee Active Card -->
-                        <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-primary h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Employee Aktif</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-users fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Employee Non-Active Card -->
-                        <div class="col-xl-4 col-md-6 mb-4">
-                            <div class="card border-left-danger h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                                Employee Non Aktif</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">1</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-users fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
-
                     <!-- DataTables -->
                     <div class="card mb-4">
-                        <div class="card-header py-3">
-                            <div class="d-flex flex-row align-items-center justify-content-between">
-                                <div class="item">
-                                    <button type="button" data-toggle="modal" data-target="#tambahData"
-                                        class="btn btn-primary btn-sm"><i class="fas fa-plus-circle mr-1"></i>Tambah
-                                        Data</button>
-                                </div>
-                                <div class="item">
-                                    <button type="button" class="btn btn-info btn-sm"><i class="fas fa-file-import"></i>
-                                        Import</button>
-                                    <button type="button" class="btn btn-success btn-sm"><i
-                                            class="fas fa-file-export"></i> Export</button>
-                                </div>
-                            </div>
-                        </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>No</th>
-                                            <th>Employee ID</th>
-                                            <th>KTP ID</th>
-                                            <th>Full Name</th>
-                                            <th>Department</th>
-                                            <th>Status</th>
+                                            <th>Hari</th>
+                                            <th>Tanggal</th>
+                                            <th>Shift</th>
+                                            <th>Keterangan</th>
                                             <th>#</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>1</td>
-                                            <td>201702102</td>
-                                            <td>8762882376277</td>
-                                            <td>Edinburgh Ahmad</td>
-                                            <td>Manager</td>
-                                            <td><span class="badge badge-primary">Aktif</span></td>
+                                            <td>Senin</td>
+                                            <td>23 Februari 2022</td>
+                                            <td>Shift 3</td>
+                                            <td>Surveyor</td>
                                             <td>
                                                 <button type="button" class="btn btn-warning btn-sm border-0"
                                                     data-toggle="modal" data-target="#editData"><i
                                                         class="fas fa-edit"></i></button>
-                                                <button type="button" data-toggle="modal" data-target="#deleteData"
-                                                    class="btn btn-danger btn-sm border-0"><i
+                                                <button type="button" onclick="deleteData()" class="btn btn-danger btn-sm border-0"><i
                                                         class="fas fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td>201702103</td>
-                                            <td>8762882322237</td>
-                                            <td>Endang Syafii</td>
-                                            <td>Staff</td>
-                                            <td><span class="badge badge-danger">Non aktif</span></td>
+                                            <td>Selasa</td>
+                                            <td>24 Februari 2022</td>
+                                            <td>Shift 2</td>
+                                            <td>Surveyor</td>
                                             <td>
                                                 <button type="button" class="btn btn-warning btn-sm border-0"
                                                     data-toggle="modal" data-target="#editData"><i
                                                         class="fas fa-edit"></i></button>
-                                                <button type="button" onclick="deleteData()"
-                                                    class="btn btn-danger btn-sm border-0"><i
+                                                <button type="button" onclick="deleteData()" class="btn btn-danger btn-sm border-0"><i
                                                         class="fas fa-trash"></i></button>
                                             </td>
                                         </tr>
@@ -545,35 +470,20 @@
                 <form method="POST" action="#">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Employee ID</label>
-                            <input type="text" class="form-control" placeholder="Enter Employee ID in here...">
+                            <label>Tanggal</label>
+                            <input type="date" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>KTP ID</label>
-                            <input type="text" class="form-control" placeholder="Enter KTP ID in here...">
-                        </div>
-                        <div class="form-group">
-                            <label>Fullname</label>
-                            <input type="text" class="form-control" placeholder="Enter fullname in here...">
-                        </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea class="form-control" placeholder="Enter address in here..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Department</label>
+                            <label>Shift</label>
                             <select class="form-control selectpicker" data-live-search="true">
-                                <option value="SPV">SPV</option>
-                                <option value="Manager">Manager</option>
-                                <option value="Staff">Staff</option>
+                                <option value="Shift 1">Shift 1</option>
+                                <option value="Shift 2">Shift 2</option>
+                                <option value="Shift 3">Shift 3</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Status</label>
-                            <select class="form-control">
-                                <option value="0">Non aktif</option>
-                                <option value="1">Aktif</option>
-                            </select>
+                            <label>Keterangan</label>
+                            <textarea class="form-control" placeholder="Enter keterangan in here..."></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -598,36 +508,20 @@
                 <form method="POST" action="#">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Employee ID</label>
-                            <input type="text" class="form-control" value="201702102">
+                            <label>Tanggal</label>
+                            <input type="date" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>KTP ID</label>
-                            <input type="text" class="form-control" value="327658552766626">
-                        </div>
-                        <div class="form-group">
-                            <label>Fullname</label>
-                            <input type="text" class="form-control" value="Edinburgh Ahmad">
-                        </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea class="form-control"
-                                value="Jl. Kebahagiaan RT/RW 01/02 Kec. Indihiang Kota Tasikmalaya 46122">Jl. Kebahagiaan RT/RW 01/02 Kec. Indihiang Kota Tasikmalaya 46122</textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Department</label>
-                            <select class="form-control">
-                                <option value="Manager">Manager</option>
-                                <option value="SPV">SPV</option>
-                                <option value="Staff">Staff</option>
+                            <label>Shift</label>
+                            <select class="form-control selectpicker" data-live-search="true">
+                                <option value="Shift 1">Shift 1</option>
+                                <option value="Shift 2">Shift 2</option>
+                                <option value="Shift 3">Shift 3</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Status</label>
-                            <select class="form-control">
-                                <option value="1">Aktif</option>
-                                <option value="0">Non aktif</option>
-                            </select>
+                            <label>Keterangan</label>
+                            <textarea class="form-control" placeholder="Enter keterangan in here..."></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
