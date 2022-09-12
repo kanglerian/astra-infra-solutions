@@ -363,19 +363,10 @@
                                     <form>
                                         <div class="form-row align-items-center">
                                             <div class="form-group col-md-6">
-                                                <label>Tanggal:</label>
-                                                <input type="date" class="form-control">
+                                                <label>Employee:</label>
+                                                <input type="text" class="form-control" value="Haisyam">
                                             </div>
                                             <div class="form-group col-md-6">
-                                                <label>Area:</label>
-                                                <input type="text" class="form-control" placeholder="Enter area...">
-                                            </div>
-                                            <div class="form-group col-md-5">
-                                                <label>Item:</label>
-                                                <select class="form-control selectpicker" id="item"
-                                                    data-live-search="true"></select>
-                                            </div>
-                                            <div class="form-group col-md-3">
                                                 <label>Shift:</label>
                                                 <select class="form-control selectpicker" data-live-search="true">
                                                     <option value="Shift 1">Shift 1</option>
@@ -383,14 +374,25 @@
                                                     <option value="Shift 3">Shift 3</option>
                                                 </select>
                                             </div>
-                                            <div class="form-group col-md-3">
-                                                <label>Shift:</label>
-                                                <select class="form-control selectpicker" id="waktu"
-                                                    data-live-search="true">
-                                                </select>
+                                            <div class="form-group col-md-6">
+                                                <label>Location:</label>
+                                                <input type="text" class="form-control" placeholder="Enter area...">
                                             </div>
-                                            <div class="col-md-1 mt-3">
-                                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                            <div class="form-group col-md-6">
+                                                <label>Area:</label>
+                                                <input type="text" class="form-control" placeholder="Enter area...">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Tanggal:</label>
+                                                <input type="date" class="form-control">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label>Categori Tools & Ingredients:</label>
+                                                <select class="form-control selectpicker" data-live-search="true">
+                                                    <option value="Shift 1">Category A </option>
+                                                    <option value="Shift 2">Category B</option>
+                                                    <option value="Shift 3">Category C</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </form>
@@ -399,14 +401,6 @@
                         </div>
                         <div class="col-12">
                             <div class="card mb-4">
-                                <div class="card-header py-3">
-                                    <div class="d-flex flex-row align-items-center justify-content-end">
-                                        <div class="item">
-                                            <button type="button" class="btn btn-info btn-sm"><i
-                                                    class="fas fa-print"></i> Cetak</button>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -414,31 +408,45 @@
                                                 <tr>
                                                     <th>No</th>
                                                     <th>Item</th>
-                                                    <th>Waktu</th>
-                                                    <th>Shift</th>
                                                     <th>Status</th>
-                                                    <th>#</th>
+                                                    <th>Keterangan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Bau Aroma</td>
-                                                    <td>8</td>
-                                                    <td>Shift 2</td>
-                                                    <td><span class="badge badge-primary">Checked</span></td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-warning btn-sm border-0"
-                                                            data-toggle="modal" data-target="#editData"><i
-                                                                class="fas fa-edit"></i></button>
-                                                        <button type="button" data-toggle="modal"
-                                                            data-target="#deleteData"
-                                                            class="btn btn-danger btn-sm border-0"><i
-                                                                class="fas fa-trash"></i></button>
-                                                    </td>
+                                                    <td><input type="text" class="form-control" value="Bau Aroma"></td>
+                                                    <td><select class="form-control selectpicker" data-live-search="true">
+                                                        <option value="">Pilih</option>
+                                                        <option value="K">Kotor</option>
+                                                        <option value="B">Bersih</option>
+                                                        <option value="R">Rusak</option>
+                                                    </select></td>
+                                                    <td><input type="text" class="form-control" value="Keterangan"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td><input type="text" class="form-control" value="Bau Aroma"></td>
+                                                    <td><select class="form-control selectpicker" data-live-search="true">
+                                                        <option value="">Pilih</option>
+                                                        <option value="K">Kotor</option>
+                                                        <option value="B">Bersih</option>
+                                                        <option value="R">Rusak</option>
+                                                    </select></td>
+                                                    <td><input type="text" class="form-control" value="Keterangan"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
+                                    </div>
+                                    <div class="card-footer py-3">
+                                        <div class="d-flex flex-row align-items-center justify-content-end">
+                                            <div class="item">
+                                                <button type="button" class="btn btn-primary btn-sm"><i
+                                                    class="fas fa-save"></i> Simpan</button>
+                                                <button type="button" class="btn btn-info btn-sm"><i
+                                                        class="fas fa-print"></i> Cetak</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
