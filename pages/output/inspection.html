@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.png">
+    <title>PT. Assets Media - Print Inspection Card</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            font: 12pt "Tahoma";
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 287mm;
+            padding: 15mm;
+            padding-top: 5mm;
+            margin: 10mm auto;
+            border: 1px #D3D3D3 solid;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .subpage {
+            padding: 1cm;
+            border: 5px red solid;
+            height: 257mm;
+            outline: 2cm #FFEAEA solid;
+        }
+
+        td {
+            padding-top: 5px;
+        }
+
+        @page {
+            size: F4;
+            margin: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                width: 210mm;
+                height: 297mm;
+            }
+
+            .page {
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-6 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .flex-2 {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .flex-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-4 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+        .flex-5 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .box-2 {
+            font-size: 12px;
+            overflow: hidden;
+            width: 150px;
+            text-align: center;
+        }
+
+        .p {
+            border-bottom: 1px solid black;
+            margin-bottom: 15px;
+        }
+
+        .p-2 {
+            border-bottom: 1px solid black;
+            margin-top: 60px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .font-reguler {
+            font-size: 14px;
+        }
+
+        .font-sm {
+            font-size: 12px;
+        }
+
+        .font-xs {
+            font-size: 10px;
+        }
+
+        .mt-2 {
+            margin-top: 10px;
+        }
+
+        .mint-2 {
+            margin-top: -10px;
+        }
+
+        .border {
+            border: 0.5px solid black;
+            padding: 0px 10px 0px 10px;
+            margin-bottom: 5px;
+        }
+
+        .border-tab {
+            margin: 10px 0px 10px 0px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        ol {
+            margin-left: -40px;
+        }
+
+        table,
+        th,
+        td {
+            border: 0.5px solid black;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book">
+        <div class="page">
+            <div class="flex-3">
+                <div>
+                    <img src="../../img/logo.png" height="80px">
+                </div>
+                <div>
+                    <p style="font-size: 12px; margin-left: 10px;"><b>PTEPI-AIS<br>PENDOPO DARMODIHARJO</b><br>Jln. D.I
+                        Panjaitan Gang
+                        Karangsari
+                        58, RT.011/003<br>Kel. Soklat Kec.
+                        Subang 41215<br>Tel 0260 4241174</p>
+                </div>
+            </div>
+            <hr style="margin: 0px 0px 0px 0px">
+            <p class="font-reguler font-bold text-center">TOILET INSPECTION CARD</p>
+            <div class="border font-sm">
+                <p>Hari: ..................<br>Tanggal/Bulan/Tahun: ..................<br>Area: ..................</p>
+            </div>
+            <div class="border-tab">
+                <table>
+                    <tr>
+                        <th rowspan="3">Name</th>
+                        <th colspan="8">Shift 1</th>
+                        <th colspan="8">Shift 2</th>
+                        <th colspan="8">Shift 3</th>
+                    </tr>
+                    <tr>
+                        <th colspan="8">Waktu Pengecekan</th>
+                        <th colspan="8">Waktu Pengecekan</th>
+                        <th colspan="8">Waktu Pengecekan</th>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                        <th>11</th>
+                        <th>12</th>
+                        <th>13</th>
+                        <th>14</th>
+                        <th>15</th>
+                        <th>16</th>
+                        <th>17</th>
+                        <th>18</th>
+                        <th>19</th>
+                        <th>20</th>
+                        <th>21</th>
+                        <th>22</th>
+                        <th>23</th>
+                        <th>24</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                    </tr>
+                    <!-- Content -->
+                    <tr>
+                        <td>BAU / AROMA</td>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <td>BAU / AROMA</td>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <td>BAU / AROMA</td>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                    <!-- End Content -->
+                    <!-- Footer -->
+                    <tr>
+                        <td class="font-bold text-center">Paraf Leader</td>
+                        <td colspan="8"></td>
+                        <td colspan="8"></td>
+                        <td colspan="8"></td>
+                    </tr>
+                    <!-- End Footer -->
+                </table>
+            </div>
+            <div class="border font-sm flex-5">
+                <p>Keterangan: <br>K: Kotor<br>B: Bersih<br>R: Rusak</p>
+                <div>
+                    <p>Manpower Shift: 1</p>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div>
+                    <p>Manpower Shift: 2</p>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div>
+                    <p>Manpower Shift: 3</p>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="border font-xs flex-6">
+                <div class="text-center">
+                    <p style="margin-right: 10px;" class="font-bold">PT BUMI INTI PERSADA RAYA</p>
+                    <div style="line-height: 7px;padding: 50px 0px 5px 0px">
+                        <p>
+                        <div class="border"></div><span class="font-bold">Cecep Saeful</span></p>
+                        <p>SPV</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p style="margin-right: 10px;" class="font-bold">PTEPI - AIS JO</p>
+                    <div style="line-height: 7px;padding: 50px 0px 5px 0px">
+                        <p>
+                        <div class="border"></div><span class="font-bold">Ahmad Fahmi</span></p>
+                        <p>Inspector</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p style="margin-right: 10px;" class="font-bold">LMS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
