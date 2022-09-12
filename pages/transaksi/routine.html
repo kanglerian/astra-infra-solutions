@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="amisbudi.co">
 
-    <title>PT. Assets Media - Inspection</title>
+    <title>PT. Assets Media - Jadwal</title>
     <link rel="shortcut icon" href="./img/favicon.png">
 
     <!-- Icons & Fonts-->
@@ -60,18 +60,23 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseData"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-database"></i>
-                    <span>Master Data</span>
+                    <span>Maintenance Routine</span>
                 </a>
                 <div id="collapseData" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../master/users.html"><i class="fas fa-users"></i> Employee / Users</a>
-                        <a class="collapse-item" href="#"><i class="fas fa-calendar-week"></i> Jadwal</a>
-                        <a class="collapse-item" href="#"><i class="fas fa-map-marked-alt"></i> Lokasi</a>
-                        <a class="collapse-item" href="#"><i class="fas fa-hard-hat"></i> Kontraktor</a>
-                        <a class="collapse-item" href="#"><i class="fas fa-clipboard-list"></i> Method /
+                        <a class="collapse-item" href="../master/users.html"><i class="fas fa-users"></i> Employee</a>
+                        <a class="collapse-item" href="../master/jadwal.html"><i class="fas fa-calendar-week"></i>
+                            Jadwal</a>
+                        <a class="collapse-item" href="../master/lokasi.html"><i class="fas fa-map-marked-alt"></i>
+                            Lokasi</a>
+                        <a class="collapse-item" href="../master/kontraktor.html"><i class="fas fa-hard-hat"></i>
+                            Kontraktor</a>
+                        <a class="collapse-item" href="../master/method.html"><i class="fas fa-clipboard-list"></i>
+                            Method /
                             Activites</a>
-                        <a class="collapse-item" href="#"><i class="fas fa-sticky-note"></i> SOR</a>
-                        <a class="collapse-item" href="#"><i class="fas fa-tools"></i> Tools & Ingredients</a>
+                        <a class="collapse-item" href="../master/sor.html"><i class="fas fa-sticky-note"></i> SOR</a>
+                        <a class="collapse-item" href="../master/tools.html"><i class="fas fa-tools"></i> Tools &
+                            Ingredients</a>
                     </div>
                 </div>
             </li>
@@ -89,7 +94,8 @@
                         <a class="collapse-item" href="#"><i class="fas fa-dot-circle"></i> Routine Maintenance</a>
                         <a class="collapse-item" href="#"><i class="fas fa-dot-circle"></i> Perbaikan Asset</a>
                         <a class="collapse-item" href="#"><i class="fas fa-dot-circle"></i> Joint Measurement</a>
-                        <a class="collapse-item" href="../transaksi/material.html"><i class="fas fa-dot-circle"></i> Material Approval</a>
+                        <a class="collapse-item" href="../transaksi/material.html"><i class="fas fa-dot-circle"></i>
+                            Material Approval</a>
                         <a class="collapse-item" href="#"><i class="fas fa-dot-circle"></i> Opname Mainline</a>
                         <a class="collapse-item" href="#"><i class="fas fa-dot-circle"></i> Opname Location</a>
                     </div>
@@ -141,11 +147,15 @@
                 </a>
                 <div id="collapseSetting" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="../setting/shift.html"><i class="fas fa-cloud-moon"></i> Shift</a>
-                        <a class="collapse-item" href="../setting/holiday.html"><i class="fas fa-calendar-week"></i> Holiday</a>
-                        <a class="collapse-item" href="../setting/complaint.html"><i class="fas fa-bullhorn"></i> Complaint</a>
+                        <a class="collapse-item" href="../setting/shift.html"><i class="fas fa-cloud-moon"></i>
+                            Shift</a>
+                        <a class="collapse-item" href="../setting/holiday.html"><i class="fas fa-calendar-week"></i>
+                            Holiday</a>
+                        <a class="collapse-item" href="../setting/complaint.html"><i class="fas fa-bullhorn"></i>
+                            Complaint</a>
                         <a class="collapse-item" href="../setting/area.html"><i class="fas fa-map"></i> Area</a>
-                        <a class="collapse-item" href="../setting/assets.html"><i class="fas fa-warehouse"></i> Jenis Asset</a>
+                        <a class="collapse-item" href="../setting/assets.html"><i class="fas fa-warehouse"></i> Jenis
+                            Asset</a>
                     </div>
                 </div>
             </li>
@@ -358,63 +368,17 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
+                            <!-- DataTables -->
                             <div class="card mb-4">
-                                <div class="card-body">
-                                    <form>
-                                        <div class="form-row align-items-center">
-                                            <div class="form-group col-md-6">
-                                                <label>Tanggal:</label>
-                                                <input type="date" class="form-control">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label>Area:</label>
-                                                <input type="text" class="form-control" placeholder="Enter area...">
-                                            </div>
-                                            <div class="form-group col-md-5">
-                                                <label>Item:</label>
-                                                <select class="form-control selectpicker" id="item"
-                                                    data-live-search="true"></select>
-                                            </div>
-                                            <div class="form-group col-md-3">
-                                                <label>Shift:</label>
-                                                <select class="form-control selectpicker" data-live-search="true">
-                                                    <option value="Shift 1">Shift 1</option>
-                                                    <option value="Shift 2">Shift 2</option>
-                                                    <option value="Shift 3">Shift 3</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-3">
-                                                <label>Shift:</label>
-                                                <select class="form-control selectpicker" id="waktu"
-                                                    data-live-search="true">
-                                                </select>
-                                            </div>
-                                            <div class="col-md-1 mt-3">
-                                                <button type="submit" class="btn btn-primary">Simpan</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="card mb-4">
-                                <div class="card-header py-3">
-                                    <div class="d-flex flex-row align-items-center justify-content-end">
-                                        <div class="item">
-                                            <button type="button" class="btn btn-info btn-sm"><i
-                                                    class="fas fa-print"></i> Cetak</button>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <thead>
                                                 <tr>
                                                     <th>No</th>
-                                                    <th>Item</th>
-                                                    <th>Waktu</th>
+                                                    <th>Employee Name</th>
+                                                    <th>SPV</th>
+                                                    <th>Tanggal</th>
                                                     <th>Shift</th>
                                                     <th>Status</th>
                                                     <th>#</th>
@@ -423,18 +387,26 @@
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>Bau Aroma</td>
-                                                    <td>8</td>
-                                                    <td>Shift 2</td>
+                                                    <td>Haisyam Maulana</td>
+                                                    <td>DR. Ahmad Subarjo</td>
+                                                    <td>23 Februari 2022</td>
+                                                    <td>Shift 3</td>
                                                     <td><span class="badge badge-primary">Checked</span></td>
                                                     <td>
                                                         <button type="button" class="btn btn-warning btn-sm border-0"
-                                                            data-toggle="modal" data-target="#editData"><i
-                                                                class="fas fa-edit"></i></button>
-                                                        <button type="button" data-toggle="modal"
-                                                            data-target="#deleteData"
-                                                            class="btn btn-danger btn-sm border-0"><i
-                                                                class="fas fa-trash"></i></button>
+                                                            data-toggle="modal" data-target="#editData">Approve</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Maulana</td>
+                                                    <td>DR. Ahmad Subarjo</td>
+                                                    <td>24 Februari 2022</td>
+                                                    <td>Shift 2</td>
+                                                    <td><span class="badge badge-danger">Uncheck</span></td>
+                                                    <td>
+                                                        <a href="inspection.html"
+                                                            class="btn btn-danger btn-sm border-0">Inspect</a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -491,65 +463,13 @@
         </div>
     </div>
 
-    <!-- Tambah Model -->
-    <div class="modal fade" id="tambahData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Users</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <form method="POST" action="#">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>Employee ID</label>
-                            <input type="text" class="form-control" placeholder="Enter Employee ID in here...">
-                        </div>
-                        <div class="form-group">
-                            <label>KTP ID</label>
-                            <input type="text" class="form-control" placeholder="Enter KTP ID in here...">
-                        </div>
-                        <div class="form-group">
-                            <label>Fullname</label>
-                            <input type="text" class="form-control" placeholder="Enter fullname in here...">
-                        </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea class="form-control" placeholder="Enter address in here..."></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Department</label>
-                            <select class="form-control selectpicker" data-live-search="true">
-                                <option value="SPV">SPV</option>
-                                <option value="Manager">Manager</option>
-                                <option value="Staff">Staff</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label>Status</label>
-                            <select class="form-control">
-                                <option value="0">Non aktif</option>
-                                <option value="1">Aktif</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <button type="button" onclick="saveData()" class="btn btn-primary">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <!-- Edit Model -->
     <div class="modal fade" id="editData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Users</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Approve</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -557,41 +477,24 @@
                 <form method="POST" action="#">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Employee ID</label>
-                            <input type="text" class="form-control" value="201702102">
-                        </div>
-                        <div class="form-group">
-                            <label>KTP ID</label>
-                            <input type="text" class="form-control" value="327658552766626">
-                        </div>
-                        <div class="form-group">
-                            <label>Fullname</label>
-                            <input type="text" class="form-control" value="Edinburgh Ahmad">
-                        </div>
-                        <div class="form-group">
-                            <label>Address</label>
-                            <textarea class="form-control"
-                                value="Jl. Kebahagiaan RT/RW 01/02 Kec. Indihiang Kota Tasikmalaya 46122">Jl. Kebahagiaan RT/RW 01/02 Kec. Indihiang Kota Tasikmalaya 46122</textarea>
-                        </div>
-                        <div class="form-group">
-                            <label>Department</label>
-                            <select class="form-control">
-                                <option value="Manager">Manager</option>
-                                <option value="SPV">SPV</option>
-                                <option value="Staff">Staff</option>
+                            <label>SPV:</label>
+                            <select class="form-control selectpicker" data-live-search="true">
+                                <option value="DR. Ahmad Subarjo">DR. Ahmad Subarjo</option>
+                                <option value="Rambo">Rambo</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Status</label>
-                            <select class="form-control">
-                                <option value="1">Aktif</option>
-                                <option value="0">Non aktif</option>
-                            </select>
+                            <label>Tanggal</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Keterangan</label>
+                            <input type="text" class="form-control" placeholder="Enter keterangan in here...">
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <button type="button" onclick="updateData()" class="btn btn-primary">Update</button>
+                        <button type="button" onclick="updateData()" class="btn btn-primary">Approve</button>
                     </div>
                 </form>
             </div>
