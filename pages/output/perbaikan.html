@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/favicon.png">
+    <title>PT. Assets Media - Print Perbaikan / Pergantian As</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #FAFAFA;
+            font: 12pt "Tahoma";
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 287mm;
+            padding: 15mm;
+            padding-top: 5mm;
+            margin: 10mm auto;
+            border: 1px #D3D3D3 solid;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .subpage {
+            padding: 1cm;
+            border: 5px red solid;
+            height: 257mm;
+            outline: 2cm #FFEAEA solid;
+        }
+
+        td {
+            padding-top: 5px;
+        }
+
+        @page {
+            size: F4;
+            margin: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                width: 210mm;
+                height: 297mm;
+            }
+
+            .page {
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+        }
+
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-2 {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .flex-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-4 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+
+        .flex-5 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box {
+            border: 1px solid black;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .box-2 {
+            font-size: 12px;
+            overflow: hidden;
+            width: 150px;
+            text-align: center;
+        }
+
+        .p {
+            border-bottom: 1px solid black;
+            margin-bottom: 15px;
+        }
+
+        .p-2 {
+            border-bottom: 1px solid black;
+            margin-top: 60px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .font-reguler {
+            font-size: 14px;
+        }
+
+        .font-sm {
+            font-size: 12px;
+        }
+
+        .font-xs {
+            font-size: 10px;
+        }
+
+        .mt-2 {
+            margin-top: 10px;
+        }
+
+        .mint-2 {
+            margin-top: -10px;
+        }
+
+        .border {
+            border: 0.5px solid black;
+            padding: 0px 10px 0px 10px;
+            margin-bottom: 5px;
+        }
+
+        .border-tab {
+            margin: 10px 0px 10px 0px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            border: 0.5px solid black;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book">
+        <div class="page">
+            <div class="flex-3">
+                <div>
+                    <img src="../../img/logo.png" height="80px">
+                </div>
+                <div>
+                    <p style="font-size: 12px; margin-left: 10px;"><b>PTEPI-AIS<br>PENDOPO DARMODIHARJO</b><br>Jln. D.I
+                        Panjaitan Gang
+                        Karangsari
+                        58, RT.011/003<br>Kel. Soklat Kec.
+                        Subang 41215<br>Tel 0260 4241174</p>
+                </div>
+            </div>
+            <hr style="margin: 0px 0px 0px 0px">
+            <p class="font-reguler font-bold text-center">PERBAIKAN / PERGANTIAN ASET</p>
+            <div class="border font-sm">
+                <p><span class="font-bold">Tanggal Temuan / Kerjadian</span>:</p>
+            </div>
+            <div class="border font-sm flex">
+                <p><span class="font-bold">Tanggal Pengajuan</span>:</p>
+                <p>Nomor seri: .../SP/.../.../.../2022</p>
+            </div>
+            <div class="border font-sm flex">
+                <p><span class="font-bold">Jumlah Aset</span>:</p>
+                <p>KM: ......... MO.Subang</p>
+            </div>
+            <div class="border font-sm flex-5">
+                <div class="flex-2">
+                    <p>
+                    <div class="box"></div>Kecelakaan</p>
+                </div>
+                <p>Lokasi: Jalur / Gerbang / Rest Area</p>
+            </div>
+            <div class="border font-sm flex-5">
+                <div class="flex-2">
+                    <p>
+                    <div class="box"></div>Vandalisme / Pencurian</p>
+                </div>
+                <p>Klasifikasi: Urgent / Darurat / Normal</p>
+            </div>
+            <div class="border font-sm flex-5">
+                <div class="flex-2">
+                    <p>
+                    <div class="box"></div>Force / Majeure</p>
+                </div>
+                <p>Durasi kerja: ..... </p>
+            </div>
+            <p class="font-sm">Menginformasikan bahwa kami akan melaksanakan kerja perbaikan / penggantian aset sebagai
+                berikut:</p>
+            <div class="border-tab">
+                <table>
+                    <tr>
+                        <th>Kode</th>
+                        <th>Jenis Pekerjaan</th>
+                        <th>Unit</th>
+                        <th>Kuantitas</th>
+                        <th>Harga Satuan (Rp)</th>
+                        <th>Jumlah (Rp)</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center">BA.203</td>
+                        <td>Handshoap Dispenser (Wikea Single 300)</td>
+                        <td class="text-center">Pcs</td>
+                        <td class="text-center">1,00</td>
+                        <td class="text-right">182.355</td>
+                        <td class="text-right">182.355</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">BA.203</td>
+                        <td>Handshoap Dispenser (Wikea Single 300)</td>
+                        <td class="text-center">Pcs</td>
+                        <td class="text-center">1,00</td>
+                        <td class="text-right">182.355</td>
+                        <td class="text-right">182.355</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-center font-bold">Total Anggaran:</td>
+                        <td class="font-bold text-center">1.061.837</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="border font-xs flex">
+                <div class="text-center">
+                    <p style="margin-right: 10px;">Diajukan:</p>
+                    <div style="line-height: 7px;padding: 50px 0px 5px 0px">
+                        <p>
+                        <div class="border"></div><span class="font-bold">Manajer Kepala Bagian</span></p>
+                        <p>AIS</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p style="margin-right: 10px;">Diverifikasi:</p>
+                    <div style="line-height: 7px;padding: 50px 0px 5px 0px">
+                        <p>
+                        <div class="border"></div><span class="font-bold">General Service Section Head</span></p>
+                        <p>PT Lintas Marga Sadaya</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p style="margin-right: 10px;">Disetujui:</p>
+                    <div style="line-height: 7px;padding: 50px 0px 5px 0px">
+                        <p>
+                        <div class="border"></div><span class="font-bold">GS. Procesurement and RSA Dept. Head</span>
+                        </p>
+                        <p>PT Lintas Marga Sadaya</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border text-center" style="background-color: #000000;color: #FFFFFF">
+                <p class="font-bold font-sm">Uraian</p>
+            </div>
+            <div class="border font-sm text-center">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, facere dolore ullam suscipit ex
+                    sit accusamus beatae mollitia quibusdam libero magnam officiis! Tempora quo porro amet vero,
+                    laudantium veniam unde?</p>
+            </div>
+            <div class="flex font-sm">
+                <p>Diharapkan pekerjaan perbaikan tersebut diatas diselesaikan pada:</p>
+                <div class="flex-2">
+                    <p>......(Jam)</p>
+                    <p>......(Tanggal)</p>
+                </div>
+            </div>
+            <div class="flex font-sm">
+                <p>Tanggal Mulai Pekerjaan:</p>
+                <p>Wajib diisi jika submit pengajuan + realisasi</p>
+            </div>
+            <div class="flex font-sm">
+                <p>Tanggal Selesai Pekerjaan:</p>
+                <p>Wajib diisi jika submit pengajuan + realisasi</p>
+            </div>
+            <div class="flex font-sm">
+                <p>Tanggal Ajuan Sertifikasi:</p>
+            </div>
+            <div class="border-tab">
+                <table>
+                    <tr>
+                        <th>Kode</th>
+                        <th>Jenis Pekerjaan</th>
+                        <th>Unit</th>
+                        <th>Kuantitas</th>
+                        <th>Harga Satuan (Rp)</th>
+                        <th>Jumlah (Rp)</th>
+                    </tr>
+                    <tr>
+                        <td class="text-center">BA.203</td>
+                        <td>Handshoap Dispenser (Wikea Single 300)</td>
+                        <td class="text-center">Pcs</td>
+                        <td class="text-center">1,00</td>
+                        <td class="text-right">182.355</td>
+                        <td class="text-right">182.355</td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">BA.203</td>
+                        <td>Handshoap Dispenser (Wikea Single 300)</td>
+                        <td class="text-center">Pcs</td>
+                        <td class="text-center">1,00</td>
+                        <td class="text-right">182.355</td>
+                        <td class="text-right">182.355</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-center font-bold">Total Akhir:</td>
+                        <td class="font-bold text-center">1.061.837</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="border font-xs flex">
+                <div class="text-center">
+                    <p style="margin-right: 10px;">Diajukan:</p>
+                    <div style="line-height: 7px;padding: 50px 0px 5px 0px">
+                        <p>
+                        <div class="border"></div><span class="font-bold">Manajer Kepala Bagian</span></p>
+                        <p>AIS</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p style="margin-right: 10px;">Diverifikasi:</p>
+                    <div style="line-height: 7px;padding: 50px 0px 5px 0px">
+                        <p>
+                        <div class="border"></div><span class="font-bold">General Service Section Head</span></p>
+                        <p>PT Lintas Marga Sadaya</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <p style="margin-right: 10px;">Disetujui:</p>
+                    <div style="line-height: 7px;padding: 50px 0px 5px 0px">
+                        <p>
+                        <div class="border"></div><span class="font-bold">GS. Procesurement and RSA Dept. Head</span>
+                        </p>
+                        <p>PT Lintas Marga Sadaya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
