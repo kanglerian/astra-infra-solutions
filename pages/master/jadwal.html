@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="amisbudi.co">
 
-    <title>PT. Assets Media - Jadwal</title>
+    <title>PT. Astra Infra Solutions - Jadwal</title>
     <link rel="shortcut icon" href="./img/favicon.png">
 
     <!-- Icons & Fonts-->
@@ -241,7 +241,7 @@
                                 <div class="card-body">
                                     <form>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Tanggal:</label>
+                                            <label class="col-sm-3 col-form-label">Date:</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control">
                                             </div>
@@ -257,13 +257,13 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-sm-3 col-form-label">Keterangan:</label>
+                                            <label class="col-sm-3 col-form-label">Note:</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" placeholder="Enter keterangan...">
+                                                <input type="text" class="form-control" placeholder="Enter Note...">
                                             </div>
                                         </div>
                                         <button type="button" onclick="saveData()" class="btn btn-primary btn-sm"><i
-                                                class="fas fa-plus"></i> Tambah</button>
+                                                class="fas fa-plus"></i> Add</button>
                                     </form>
                                 </div>
                             </div>
@@ -279,9 +279,9 @@
                                                     <th>No</th>
                                                     <th>Employee Name</th>
                                                     <th>SPV</th>
-                                                    <th>Tanggal</th>
+                                                    <th>Date</th>
                                                     <th>Shift</th>
-                                                    <th>Keterangan</th>
+                                                    <th>Note</th>
                                                     <th>#</th>
                                                 </tr>
                                             </thead>
@@ -378,7 +378,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Jadwal</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Data Schedule</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -401,7 +401,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Tanggal</label>
+                            <label>Date</label>
                             <input type="date" class="form-control">
                         </div>
                         <div class="form-group">
@@ -413,12 +413,12 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Keterangan</label>
-                            <input type="text" class="form-control" placeholder="Enter keterangan in here...">
+                            <label>Note</label>
+                            <input type="text" class="form-control" placeholder="Enter Note in here...">
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" onclick="updateData()" class="btn btn-primary">Update</button>
                     </div>
                 </form>
@@ -449,9 +449,9 @@
 
         const saveData = () => {
             Swal.fire({
-                title: 'Data baru telah ditambahkan',
+                title: 'New data has been added',
                 icon: 'success',
-                confirmButtonText: 'Tutup',
+                confirmButtonText: 'Close',
             }).then((result) => {
                 if (result.isConfirmed) {
                     location.reload();
@@ -461,9 +461,9 @@
 
         const updateData = () => {
             Swal.fire({
-                title: 'Data telah diperbarui',
+                title: 'Data has been updated',
                 icon: 'success',
-                confirmButtonText: 'Tutup',
+                confirmButtonText: 'Close',
             }).then((result) => {
                 if (result.isConfirmed) {
                     location.reload();
@@ -473,15 +473,15 @@
 
         const deleteData = () => {
             Swal.fire({
-                title: 'Yakin hapus data?',
-                text: 'Klik hapus jika kamu setuju.',
+                title: 'Are you sure you delete data?',
+                text: 'Click delete if you agree.',
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Hapus',
-                cancelButtonText: 'Batal',
+                confirmButtonText: 'Delete',
+                cancelButtonText: 'Cancel',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire('Terhapus!', 'Data telah dihapus.', 'success');
+                    Swal.fire('Deleted!', 'Data has been deleted.', 'success');
                 } else if (result.isDenied) {
                     Swal.fire('Changes are not saved', '', 'info')
                 }

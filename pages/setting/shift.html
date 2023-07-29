@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="amisbudi.co">
 
-    <title>PT. Assets Media - Shift Setting</title>
+    <title>PT. Astra Infra Solutions - Shift Setting</title>
     <link rel="shortcut icon" href="./img/favicon.png">
 
     <!-- Icons & Fonts-->
@@ -224,7 +224,7 @@
                             <div class="d-flex flex-row align-items-center justify-content-between">
                                 <div class="item">
                                     <button type="button" data-toggle="modal" data-target="#tambahData"
-                                        class="btn btn-primary btn-sm"><i class="fas fa-plus-circle mr-1"></i>Tambah
+                                        class="btn btn-primary btn-sm"><i class="fas fa-plus-circle mr-1"></i>Add New
                                         Data</button>
                                 </div>
                                 <div class="item">
@@ -344,7 +344,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data Shift</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Data Shift</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -361,8 +361,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <button type="button" onclick="saveData()" class="btn btn-primary">Simpan</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" onclick="saveData()" class="btn btn-primary">Save</button>
                     </div>
                 </form>
             </div>
@@ -391,7 +391,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="button" onclick="updateData()" class="btn btn-primary">Update</button>
                     </div>
                 </form>
@@ -422,9 +422,9 @@
 
         const saveData = () => {
             Swal.fire({
-                title: 'Data baru telah ditambahkan',
+                title: 'New data has been added',
                 icon: 'success',
-                confirmButtonText: 'Tutup',
+                confirmButtonText: 'Close',
             }).then((result) => {
                 if(result.isConfirmed){
                     location.reload();
@@ -434,9 +434,9 @@
 
         const updateData = () => {
             Swal.fire({
-                title: 'Data telah diperbarui',
+                title: 'Data has been updated',
                 icon: 'success',
-                confirmButtonText: 'Tutup',
+                confirmButtonText: 'Close',
             }).then((result) => {
                 if(result.isConfirmed){
                     location.reload();
@@ -446,15 +446,15 @@
 
         const deleteData = () => {
             Swal.fire({
-                title: 'Yakin hapus data?',
-                text: 'Klik hapus jika kamu setuju.',
+                title: 'Are you sure you delete data?',
+                text: 'Click delete if you agree.',
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonText: 'Hapus',
-                cancelButtonText: 'Batal',
+                confirmButtonText: 'Delete',
+                cancelButtonText: 'Cancel',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    Swal.fire('Terhapus!', 'Data telah dihapus.', 'success');
+                    Swal.fire('Deleted!', 'Data has been deleted.', 'success');
                 } else if (result.isDenied) {
                     Swal.fire('Changes are not saved', '', 'info')
                 }
